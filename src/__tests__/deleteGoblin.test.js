@@ -19,8 +19,6 @@ test('Проверка удаления класса у объекта', () => {
   addGoblin();
 
   const fieldHasGoblin = document.querySelector('.field_has-goblin');
-  //const value = "<div class=\"field field_has-goblin\" />";
-  //expect(fieldHasGoblin).toBe(value);
 
   deleteGoblin();
 

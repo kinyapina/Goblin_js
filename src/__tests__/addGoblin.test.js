@@ -27,6 +27,6 @@ test('should add the class field_has-goblin to a random field', () => {
   addGoblin();
 
   const fieldHasGoblin = document.querySelector('.field_has-goblin');
-  //expect(fieldHasGoblin).toBeInTheDocument();
+
   expect(fieldHasGoblin.classList).toContain('field_has-goblin');
 });
