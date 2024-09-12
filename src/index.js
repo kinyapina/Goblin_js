@@ -9,3 +9,5 @@ document.addEventListener('DOMContentLoaded', () => {
     addGoblin();
   }, 1000)
 });
+
+console.log(document.querySelector('.field_has-goblin'));

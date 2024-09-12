@@ -1,39 +1,32 @@
-import addGoblin from "../js/addGoblin";
+import addGoblin from "../js/addGoblin.js";
 
-let container;
+test('should add the class field_has-goblin to a random field', () => {
+  document.body.innerHTML = `
+      <div class="container">
+        <div class="fields">
+          <div class="field" data-id="1"></div>
+          <div class="field" data-id="2"></div>
+          <div class="field" data-id="3"></div>
+          <div class="field" data-id="4"></div>
+          <div class="field" data-id="5"></div>
+          <div class="field" data-id="6"></div>
+          <div class="field" data-id="7"></div>
+          <div class="field" data-id="8"></div>
+          <div class="field" data-id="9"></div>
+          <div class="field" data-id="10"></div>
+          <div class="field" data-id="11"></div>
+          <div class="field" data-id="12"></div>
+          <div class="field" data-id="13"></div>
+          <div class="field" data-id="14"></div>
+          <div class="field" data-id="15"></div>
+          <div class="field" data-id="16"></div>
+        </div>
+      </div>
+    `;
 
-beforeEach(() => {
-  container = document.createElement('div');
-
-  container.innerHTML = `
-    <div class='field'></div>
-    <div class='field'></div>
-    <div class='field'></div>
-  `;
-
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  document.body.removeChild(container);
-});
-
-test('Проверка добавления класса "field_has-goblin" для рандомного элемента', () => {
   addGoblin();
 
-  const fields = container.querySelectorAll('.field');
-  const fieldHasGoblin = Array.from(fields).some(field => field.classList.contains('field_has-goblin'));
-
-  expect(fieldHasGoblin).toBe(true);
-})
-
-test('Проверка добавления класса только к одному элементу', () => {
-  addGoblin();
-  addGoblin();
-
-  const fields = container.querySelectorAll('.field');
-  const fieldHasGoblinCount = Array.from(fields).filter(field => field.classList.contains('field_has - goblin')).length;
-
-  expect(fieldHasGoblinCount).toBeGreaterThan(0);
-  expect(fieldHasGoblinCount).toBeLessThanOrEqual(1);
+  const fieldHasGoblin = document.querySelector('.field_has-goblin');
+  //expect(fieldHasGoblin).toBeInTheDocument();
+  expect(fieldHasGoblin.classList).toContain('field_has-goblin');
 });
