@@ -1,0 +1,32 @@
+body {
+  background: rgb(216, 216, 216);
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(4, 130px);
+  gap: 20px;
+  align-content: center;
+  justify-content: center;
+}
+
+.field {
+  width: 130px;
+  height: 130px;
+  border: 1px dashed;
+  border-radius: 10px;
+  background: rgb(94, 150, 134);
+}
+
+.field_has-goblin {
+  background-image: url("https://raw.githubusercontent.com/netology-code/ahj-homeworks/video/dom/pic/goblin.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgb(94, 150, 134);
+}
+
