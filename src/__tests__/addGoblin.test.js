@@ -1,4 +1,5 @@
 import addGoblin from "../js/addGoblin.js";
+import deleteGoblin from '../js/deleteGoblin.js';
 
 test('Проверка добавления класса к рандомному элементу', () => {
   document.body.innerHTML = `
@@ -60,6 +61,8 @@ test('Проверка новый индекс не равен предыдущ�
 
   const fields = document.querySelectorAll('.field');
   const firstGoblinField = Array.from(document.querySelectorAll('.field')).find(field => field.classList.contains('field_has-goblin'));
+
+  deleteGoblin();
 
   addGoblin();
 
