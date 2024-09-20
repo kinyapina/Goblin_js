@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20.12.0
-          cache: "yarn"
+          cache: "npm cache clean"
       - run: npm i
       - run: npm run lint
 
@@ -39,7 +39,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20.11.0
-          cache: "npm cache"
+          cache: "npm cache clean"
       - run: npm i
       - run: npm run test
 
@@ -57,7 +57,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20.11.0
-          cache: "yarn"
+          cache: "npm cache clean"
       - run: npm i
       - run: npm run build
       - name: Setup Pages
