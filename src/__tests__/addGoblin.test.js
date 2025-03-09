@@ -60,13 +60,13 @@ test('Проверка новый индекс не равен предыдущ�
   addGoblin();
 
   const fields = document.querySelectorAll('.field');
-  const firstGoblinField = Array.from(document.querySelectorAll('.field')).find(field => field.classList.contains('field_has-goblin'));
+  const firstGoblinField = Array.from(fields).find(field => field.classList.contains('field_has-goblin'));
 
   deleteGoblin();
 
   addGoblin();
 
-  const secondGoblinField = Array.from(document.querySelectorAll('.field')).find(field => field.classList.contains('field_has-goblin'));
+  const secondGoblinField = Array.from(fields).find(field => field.classList.contains('field_has-goblin'));
 
   expect(secondGoblinField).not.toBe(firstGoblinField);
 });
