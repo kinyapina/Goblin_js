@@ -4,7 +4,6 @@ import addGoblin from './js/addGoblin';
 import deleteGoblin from './js/deleteGoblin';
 import { GoblinCounter } from './js/counter';
 
-//Реализация поля 4*4 через js
 const fields = document.querySelector('.fields');
 
 for (let i = 0; i < 16; i++) {
