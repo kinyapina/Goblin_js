@@ -1,9 +1,11 @@
 body {
   background: rgb(216, 216, 216);
+  cursor: url('hammer.png'), auto;
 }
 
 .container {
   margin-top: 20px;
+  display: flex;
 }
 
 .fields {
@@ -28,4 +30,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: rgb(94, 150, 134);
+}
+
+.counter {
+  margin-right: 20px;
 }

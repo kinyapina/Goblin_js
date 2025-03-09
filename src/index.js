@@ -1,5 +1,9 @@
 import './style.css';
 
+import addGoblin from './js/addGoblin';
+import deleteGoblin from './js/deleteGoblin';
+import { GoblinCounter } from './js/counter';
+
 //Реализация поля 4*4 через js
 const fields = document.querySelector('.fields');
 
@@ -12,12 +16,12 @@ for (let i = 0; i < 16; i++) {
   fields.appendChild(field);
 }
 
-import addGoblin from './js/addGoblin';
-import deleteGoblin from './js/deleteGoblin';
-
 document.addEventListener('DOMContentLoaded', () => {
   const goblinInterval = setInterval(() => {
     deleteGoblin();
     addGoblin();
   }, 1000)
 });
+
+const goblinCounter = new GoblinCounter();
+
